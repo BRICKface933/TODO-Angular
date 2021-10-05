@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <h1>To Do List</h1>
+  <div class="input-group">
+    <input type="text" class="form-control" [(ngModel)] = "text" placeholder="Добавьте дело" >
+    <button class="btn btn-success" type="button" (click) = "addList()">Добавить</button>
+    <button class="btn btn-danger" type="button" (click) = "delList()">Очистить список</button>
+  </div>
+  <ul class="list-group">
+    <app-work-list *ngFor = "let wrkElem of items"
+      [items]="wrkElem"></app-work-list>
+  </ul>
+</div>
